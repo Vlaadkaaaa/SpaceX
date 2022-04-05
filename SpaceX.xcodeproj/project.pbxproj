@@ -14,6 +14,9 @@
 		5588796D27FC0EA40044DE1B /* SpaceX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5588796B27FC0EA40044DE1B /* SpaceX.xcdatamodeld */; };
 		5588796F27FC0EA60044DE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5588796E27FC0EA60044DE1B /* Assets.xcassets */; };
 		5588797227FC0EA60044DE1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5588797027FC0EA60044DE1B /* LaunchScreen.storyboard */; };
+		5588797A27FC0ED30044DE1B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5588797927FC0ED30044DE1B /* .gitignore */; };
+		55CD7DDD27FC11EE005C0578 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */; };
+		55CD7DDE27FC11EE005C0578 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5588796E27FC0EA60044DE1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5588797127FC0EA60044DE1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5588797327FC0EA60044DE1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5588797927FC0ED30044DE1B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Bold.ttf"; path = "../../../../Downloads/LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
+		55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Regular.ttf"; path = "../../../../Downloads/LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 		5588795627FC0EA40044DE1B = {
 			isa = PBXGroup;
 			children = (
+				5588797927FC0ED30044DE1B /* .gitignore */,
 				5588796127FC0EA40044DE1B /* SpaceX */,
 				5588796027FC0EA40044DE1B /* Products */,
 			);
@@ -58,6 +65,7 @@
 		5588796127FC0EA40044DE1B /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				5588797B27FC10810044DE1B /* Fonts */,
 				5588796227FC0EA40044DE1B /* AppDelegate.swift */,
 				5588796427FC0EA40044DE1B /* SceneDelegate.swift */,
 				5588796627FC0EA40044DE1B /* ViewController.swift */,
@@ -68,6 +76,15 @@
 				5588796B27FC0EA40044DE1B /* SpaceX.xcdatamodeld */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		5588797B27FC10810044DE1B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */,
+				55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,9 +145,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5588797A27FC0ED30044DE1B /* .gitignore in Resources */,
 				5588797227FC0EA60044DE1B /* LaunchScreen.storyboard in Resources */,
 				5588796F27FC0EA60044DE1B /* Assets.xcassets in Resources */,
+				55CD7DDD27FC11EE005C0578 /* LabGrotesque-Bold.ttf in Resources */,
 				5588796A27FC0EA40044DE1B /* Main.storyboard in Resources */,
+				55CD7DDE27FC11EE005C0578 /* LabGrotesque-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
