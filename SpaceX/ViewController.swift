@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rocketNameLabel: UILabel!
     
     //ScrollViewVertical
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
     }
 
     func loadingApiSpaceRocket(){
-       
+
         let urlString =  "https://api.spacexdata.com/v4/rockets"
         guard let url = URL(string: urlString) else {return}
 
@@ -99,8 +100,16 @@ class ViewController: UIViewController {
                     self.priceStartLabel.text = "\(rocket!.cost_per_launch)"
                     
                     //FirstStage
+                    self.firstAmountEngine.text = String(describing: rocket!.first_stage.engines!)
+                    self.firstAmountFuel.text = String(describing: rocket!.first_stage.fuel_amount_tons!)
+                    self.firstCombustionTime.text = String(describing: rocket!.first_stage.burn_time_sec!)
                     
                     //SecondStage
+                    self.secondAmountEngine.text = String(describing: rocket!.second_stage.engines!)
+                    self.secondAmountFuel.text = String(describing: rocket!.second_stage.fuel_amount_tons!)
+                    self.secondCombustionTime.text = String(describing: rocket!.second_stage.burn_time_sec!)
+                
+                
                 }
 
             } catch let error {

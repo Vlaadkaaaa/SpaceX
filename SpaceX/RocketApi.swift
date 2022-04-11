@@ -22,8 +22,10 @@ struct rocketArray: Decodable{
     let cost_per_launch: Int
     
     //FirstStage
+    let first_stage: FirstStage
     
     //SecondStage
+    let second_stage: SecondStage
     
 }
 
@@ -41,3 +43,21 @@ struct Mass: Decodable{
     let kg: Int
     let lb: Int
 }
+
+struct FirstStage: Decodable{
+
+    let engines: Int!
+    let fuel_amount_tons: Double!
+    let burn_time_sec: Int!
+}
+
+
+
+struct SecondStage: Decodable{
+    let engines: Int!
+    let fuel_amount_tons: Double!
+    let burn_time_sec: Int!
+}
+
+
+

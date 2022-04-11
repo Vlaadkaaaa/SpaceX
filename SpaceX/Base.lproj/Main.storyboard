@@ -300,6 +300,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="d79-5j-KW9" firstAttribute="leading" secondItem="kNo-yS-j9a" secondAttribute="trailing" constant="8" symbolic="YES" id="u8s-bU-GgN"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -328,6 +331,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Zjl-rb-O55" firstAttribute="leading" secondItem="6Xk-JX-MEq" secondAttribute="trailing" constant="8" symbolic="YES" id="KCg-UY-kIA"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -356,6 +362,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Lm1-T4-0bw" firstAttribute="leading" secondItem="Dc1-fj-J0x" secondAttribute="trailing" constant="8" symbolic="YES" id="nOD-1k-79B"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -544,6 +553,7 @@
                         <outlet property="firstCombustionTime" destination="Dc1-fj-J0x" id="aXK-Sr-nc2"/>
                         <outlet property="firstStartLabel" destination="i0d-ZV-Wel" id="ebf-Fv-1fn"/>
                         <outlet property="heightValueLabel" destination="4l2-Uy-CW1" id="StW-a4-AP1"/>
+                        <outlet property="imageView" destination="9XN-8o-M6P" id="MEn-ds-RQf"/>
                         <outlet property="loadValueLabel" destination="7fp-Zx-w4R" id="e8A-OR-QX3"/>
                         <outlet property="massValueLabel" destination="v39-4A-hwR" id="RXA-Hp-i2k"/>
                         <outlet property="priceStartLabel" destination="3Bm-EY-7Zy" id="30U-uq-MKk"/>
