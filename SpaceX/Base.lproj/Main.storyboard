@@ -19,7 +19,7 @@
         <!--View Controller-->
         <scene sceneID="og6-yN-Yno">
             <objects>
-                <viewController id="YJC-fz-HQz" sceneMemberID="viewController">
+                <viewController id="YJC-fz-HQz" customClass="ViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s2I-xe-Q0e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,6 +536,29 @@
                             <constraint firstItem="6Na-An-RUW" firstAttribute="top" secondItem="IEe-bx-NYG" secondAttribute="bottom" id="jpy-k8-7jT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countryStartLabel" destination="G6b-o3-08s" id="44U-FU-MMa"/>
+                        <outlet property="diameterNameLabel" destination="u7J-oh-Rew" id="uy1-C0-mV1"/>
+                        <outlet property="diameterValueLabel" destination="ppR-uX-Hm8" id="9w1-I9-OPj"/>
+                        <outlet property="firstAmountEngine" destination="kNo-yS-j9a" id="d0k-6N-r3c"/>
+                        <outlet property="firstAmountFuel" destination="6Xk-JX-MEq" id="paZ-8g-qry"/>
+                        <outlet property="firstCombustionTime" destination="Dc1-fj-J0x" id="aXK-Sr-nc2"/>
+                        <outlet property="firstStartLabel" destination="i0d-ZV-Wel" id="ebf-Fv-1fn"/>
+                        <outlet property="heightNameLabel" destination="4l2-Uy-CW1" id="7tN-8a-ScT"/>
+                        <outlet property="heightValueLabel" destination="3EB-ey-wtv" id="yC2-8z-8CG"/>
+                        <outlet property="loadNameLabel" destination="7fp-Zx-w4R" id="85a-vC-tU5"/>
+                        <outlet property="loadValueLabel" destination="yLh-Bu-EQ1" id="Yq3-JW-HKM"/>
+                        <outlet property="massNameLabel" destination="v39-4A-hwR" id="r4W-0Y-OdD"/>
+                        <outlet property="massValueLabel" destination="1ch-8T-UTv" id="z0B-6l-aqI"/>
+                        <outlet property="priceStartLabel" destination="3Bm-EY-7Zy" id="30U-uq-MKk"/>
+                        <outlet property="secondAmountEngine" destination="Qvo-7T-4Te" id="4yp-fK-9wR"/>
+                        <outlet property="secondAmountFuel" destination="UJT-UV-4VH" id="elG-Ol-kiO"/>
+                        <outlet property="secondCombustionTime" destination="s1j-L0-eRK" id="gSI-qb-c5M"/>
+                        <outlet property="viewFourDesign" destination="5Rr-KA-ZgA" id="8qR-0p-sn3"/>
+                        <outlet property="viewOneDesign" destination="tUj-4g-7jP" id="FsK-xo-cAI"/>
+                        <outlet property="viewThreeDesign" destination="JKW-Yu-GIo" id="uPr-aJ-b4Y"/>
+                        <outlet property="viewTwoDesign" destination="Ovt-kA-nvH" id="4Mq-mm-yFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nh8-eJ-0Ki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-fA-Hsv">
@@ -555,7 +578,7 @@
                     </constraints>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="795.6521739130435" y="12.053571428571429"/>
+            <point key="canvasLocation" x="862" y="154"/>
         </scene>
     </scenes>
     <resources>
