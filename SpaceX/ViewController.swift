@@ -9,22 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rocketNameLabel: UILabel!
+    
     //ScrollViewVertical
-        //ScrollNameLabel
-        @IBOutlet weak var heightNameLabel: UILabel!
-        @IBOutlet weak var diameterNameLabel: UILabel!
-        @IBOutlet weak var massNameLabel: UILabel!
-        @IBOutlet weak var loadNameLabel: UILabel!
-        //ScrollValueLabel
-        @IBOutlet weak var heightValueLabel: UILabel!
-        @IBOutlet weak var diameterValueLabel: UILabel!
-        @IBOutlet weak var massValueLabel: UILabel!
-        @IBOutlet weak var loadValueLabel: UILabel!
         //ViewDesign
         @IBOutlet weak var viewOneDesign: UIView!
         @IBOutlet weak var viewTwoDesign: UIView!
         @IBOutlet weak var viewThreeDesign: UIView!
         @IBOutlet weak var viewFourDesign: UIView!
+        //ScrollValueLabel
+        @IBOutlet weak var heightValueLabel: UILabel!
+        @IBOutlet weak var diameterValueLabel: UILabel!
+        @IBOutlet weak var massValueLabel: UILabel!
+        @IBOutlet weak var loadValueLabel: UILabel!
+       
 
     //StartLabel
     @IBOutlet weak var firstStartLabel: UILabel!
@@ -48,6 +46,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         designVerticalScroll()
+        loadingApiSpaceRocket()
     }
 
 
@@ -71,9 +70,53 @@ class ViewController: UIViewController {
         viewFourDesign.backgroundColor = colorViewDesign
         
     }
-    
-    
-}
+
+    func loadingApiSpaceRocket(){
+       
+        let urlString =  "https://api.spacexdata.com/v4/rockets"
+        guard let url = URL(string: urlString) else {return}
+
+          URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data else {return}
+            
+            do {
+                let decodeArray = try JSONDecoder().decode([rocketArray].self, from: data)
+        
+                DispatchQueue.main.async {
+                    let rocket = decodeArray.first
+
+                    self.rocketNameLabel.text = rocket?.name
+
+                    //ScrollView
+                    self.heightValueLabel.text = "\(rocket!.height.meters)"
+                    self.diameterValueLabel.text = "\(rocket!.diameter.meters)"
+                    self.massValueLabel.text = "\(rocket!.mass.kg)"
+
+                    //Start
+                    self.firstStartLabel.text = rocket?.first_flight
+                    self.countryStartLabel.text = rocket?.country
+                    self.priceStartLabel.text = "\(rocket!.cost_per_launch)"
+                    
+                    //FirstStage
+                    
+                    //SecondStage
+                }
+
+            } catch let error {
+                print("Error in program", error)
+            }
+        
+        
+        }
+
+        
+        .resume()
+        }
+        
+        
+    }
+
 
 
 

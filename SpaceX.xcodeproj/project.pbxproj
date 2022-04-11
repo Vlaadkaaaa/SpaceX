@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555E93E82804269800D9DF64 /* RocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E93E72804269800D9DF64 /* RocketApi.swift */; };
 		5588796327FC0EA40044DE1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796227FC0EA40044DE1B /* AppDelegate.swift */; };
 		5588796527FC0EA40044DE1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796427FC0EA40044DE1B /* SceneDelegate.swift */; };
 		5588796727FC0EA40044DE1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796627FC0EA40044DE1B /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555E93E72804269800D9DF64 /* RocketApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApi.swift; sourceTree = "<group>"; };
 		5588795F27FC0EA40044DE1B /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5588796227FC0EA40044DE1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5588796427FC0EA40044DE1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				5588796227FC0EA40044DE1B /* AppDelegate.swift */,
 				5588796427FC0EA40044DE1B /* SceneDelegate.swift */,
 				5588796627FC0EA40044DE1B /* ViewController.swift */,
+				555E93E72804269800D9DF64 /* RocketApi.swift */,
 				5588796827FC0EA40044DE1B /* Main.storyboard */,
 				5588796E27FC0EA60044DE1B /* Assets.xcassets */,
 				5588797027FC0EA60044DE1B /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555E93E82804269800D9DF64 /* RocketApi.swift in Sources */,
 				5588796727FC0EA40044DE1B /* ViewController.swift in Sources */,
 				5588796327FC0EA40044DE1B /* AppDelegate.swift in Sources */,
 				5588796527FC0EA40044DE1B /* SceneDelegate.swift in Sources */,

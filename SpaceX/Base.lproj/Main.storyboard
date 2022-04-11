@@ -40,8 +40,8 @@
                                                 <rect key="frame" x="32" y="0.0" width="350" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falcon Heavy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koh-lC-030">
-                                                        <rect key="frame" x="0.0" y="48" width="135.5" height="28"/>
-                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="23"/>
+                                                        <rect key="frame" x="0.0" y="48" width="142.5" height="28"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="23"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -74,7 +74,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-ey-wtv">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Высота, m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EB-ey-wtv">
                                                                         <rect key="frame" x="8" y="55" width="80" height="17"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
                                                                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -102,7 +102,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppR-uX-Hm8">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Диаметр, m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppR-uX-Hm8">
                                                                         <rect key="frame" x="8" y="55" width="80" height="17"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
                                                                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,7 +130,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-8T-UTv">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Масса, kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-8T-UTv">
                                                                         <rect key="frame" x="8" y="55" width="80" height="17"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
                                                                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,7 +158,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLh-Bu-EQ1">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нагрузка, кг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLh-Bu-EQ1">
                                                                         <rect key="frame" x="8" y="55" width="80" height="17"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
                                                                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -538,19 +538,16 @@
                     </view>
                     <connections>
                         <outlet property="countryStartLabel" destination="G6b-o3-08s" id="44U-FU-MMa"/>
-                        <outlet property="diameterNameLabel" destination="u7J-oh-Rew" id="uy1-C0-mV1"/>
-                        <outlet property="diameterValueLabel" destination="ppR-uX-Hm8" id="9w1-I9-OPj"/>
+                        <outlet property="diameterValueLabel" destination="u7J-oh-Rew" id="Y2K-JW-T6H"/>
                         <outlet property="firstAmountEngine" destination="kNo-yS-j9a" id="d0k-6N-r3c"/>
                         <outlet property="firstAmountFuel" destination="6Xk-JX-MEq" id="paZ-8g-qry"/>
                         <outlet property="firstCombustionTime" destination="Dc1-fj-J0x" id="aXK-Sr-nc2"/>
                         <outlet property="firstStartLabel" destination="i0d-ZV-Wel" id="ebf-Fv-1fn"/>
-                        <outlet property="heightNameLabel" destination="4l2-Uy-CW1" id="7tN-8a-ScT"/>
-                        <outlet property="heightValueLabel" destination="3EB-ey-wtv" id="yC2-8z-8CG"/>
-                        <outlet property="loadNameLabel" destination="7fp-Zx-w4R" id="85a-vC-tU5"/>
-                        <outlet property="loadValueLabel" destination="yLh-Bu-EQ1" id="Yq3-JW-HKM"/>
-                        <outlet property="massNameLabel" destination="v39-4A-hwR" id="r4W-0Y-OdD"/>
-                        <outlet property="massValueLabel" destination="1ch-8T-UTv" id="z0B-6l-aqI"/>
+                        <outlet property="heightValueLabel" destination="4l2-Uy-CW1" id="StW-a4-AP1"/>
+                        <outlet property="loadValueLabel" destination="7fp-Zx-w4R" id="e8A-OR-QX3"/>
+                        <outlet property="massValueLabel" destination="v39-4A-hwR" id="RXA-Hp-i2k"/>
                         <outlet property="priceStartLabel" destination="3Bm-EY-7Zy" id="30U-uq-MKk"/>
+                        <outlet property="rocketNameLabel" destination="koh-lC-030" id="HEc-ze-iKw"/>
                         <outlet property="secondAmountEngine" destination="Qvo-7T-4Te" id="4yp-fK-9wR"/>
                         <outlet property="secondAmountFuel" destination="UJT-UV-4VH" id="elG-Ol-kiO"/>
                         <outlet property="secondCombustionTime" destination="s1j-L0-eRK" id="gSI-qb-c5M"/>
