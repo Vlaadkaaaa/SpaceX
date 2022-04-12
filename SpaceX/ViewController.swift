@@ -83,33 +83,42 @@ class ViewController: UIViewController {
             
             do {
                 let decodeArray = try JSONDecoder().decode([rocketArray].self, from: data)
-        
-                DispatchQueue.main.async {
-                    let rocket = decodeArray.first
+                
+                let rocket = decodeArray[2]
 
-                    self.rocketNameLabel.text = rocket?.name
+                DispatchQueue.global().async {
+                    guard let imageUrl = URL(string: (rocket.flickr_images.randomElement())!) else {return}
+                    guard let imageData = try? Data(contentsOf: imageUrl) else {return}
+                
+                DispatchQueue.main.async {
+                    self.imageView.image = UIImage(data: imageData)
+                    self.rocketNameLabel.text = rocket.name
 
                     //ScrollView
-                    self.heightValueLabel.text = "\(rocket!.height.meters)"
-                    self.diameterValueLabel.text = "\(rocket!.diameter.meters)"
-                    self.massValueLabel.text = "\(rocket!.mass.kg)"
+                    self.heightValueLabel.text = "\(rocket.height.meters)"
+                    self.diameterValueLabel.text = "\(rocket.diameter.meters)"
+                    self.massValueLabel.text = "\(rocket.mass.kg)"
+                    self.loadValueLabel.text = String(describing: rocket.payload_weights.first!.kg!)
 
                     //Start
-                    self.firstStartLabel.text = rocket?.first_flight
-                    self.countryStartLabel.text = rocket?.country
-                    self.priceStartLabel.text = "\(rocket!.cost_per_launch)"
+                    self.firstStartLabel.text = rocket.first_flight
+                    self.countryStartLabel.text = rocket.country
+                    self.priceStartLabel.text = "\(rocket.cost_per_launch)"
                     
                     //FirstStage
-                    self.firstAmountEngine.text = String(describing: rocket!.first_stage.engines!)
-                    self.firstAmountFuel.text = String(describing: rocket!.first_stage.fuel_amount_tons!)
-                    self.firstCombustionTime.text = String(describing: rocket!.first_stage.burn_time_sec!)
+                    self.firstAmountEngine.text = String(describing: rocket.first_stage.engines!)
+                    self.firstAmountFuel.text = String(describing: rocket.first_stage.fuel_amount_tons!)
+                    //Необходимо убрать опционал
+                    self.firstCombustionTime.text = String(describing: rocket.first_stage.burn_time_sec!)
                     
                     //SecondStage
-                    self.secondAmountEngine.text = String(describing: rocket!.second_stage.engines!)
-                    self.secondAmountFuel.text = String(describing: rocket!.second_stage.fuel_amount_tons!)
-                    self.secondCombustionTime.text = String(describing: rocket!.second_stage.burn_time_sec!)
+                    self.secondAmountEngine.text = String(describing: rocket.second_stage.engines!)
+                    self.secondAmountFuel.text = String(describing: rocket.second_stage.fuel_amount_tons!)
+                    //Необходимо убрать опционал
+                    self.secondCombustionTime.text = String(describing: rocket.second_stage.burn_time_sec!)
                 
                 
+                }
                 }
 
             } catch let error {
@@ -119,7 +128,6 @@ class ViewController: UIViewController {
         
         }
 
-        
         .resume()
         }
         

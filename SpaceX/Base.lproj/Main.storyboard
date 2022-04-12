@@ -27,7 +27,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEe-bx-NYG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="824"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="falcon" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-8o-M6P">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-8o-M6P">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="277" id="GZY-fM-9lo"/>
@@ -412,6 +412,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="W3B-uu-QG3" firstAttribute="leading" secondItem="Qvo-7T-4Te" secondAttribute="trailing" constant="8" symbolic="YES" id="oxG-25-AiF"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -440,6 +443,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="zur-BW-mHf" firstAttribute="leading" secondItem="UJT-UV-4VH" secondAttribute="trailing" constant="8" symbolic="YES" id="bfH-tr-WvI"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -468,6 +474,9 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Ina-rP-BDw" firstAttribute="leading" secondItem="s1j-L0-eRK" secondAttribute="trailing" constant="8" symbolic="YES" id="rrf-7G-oee"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
@@ -589,7 +598,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="falcon" width="1024" height="683"/>
         <image name="setting" width="32" height="32"/>
     </resources>
 </document>
