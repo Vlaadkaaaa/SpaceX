@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var rocketNameLabel: UILabel!
     
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     //ScrollViewVertical
         //ViewDesign
         @IBOutlet weak var viewOneDesign: UIView!
@@ -41,17 +43,19 @@ class ViewController: UIViewController {
         @IBOutlet weak var secondAmountFuel: UILabel!
         @IBOutlet weak var secondCombustionTime: UILabel!
     
+    //Button
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
     
+    var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         designVerticalScroll()
         loadingApiSpaceRocket()
+        designRocket()
     }
-
-
-    
     
     func designVerticalScroll(){
         let colorViewDesign = UIColor(
@@ -69,22 +73,24 @@ class ViewController: UIViewController {
 
         viewFourDesign.layer.cornerRadius = 32
         viewFourDesign.backgroundColor = colorViewDesign
+      
+        
+            
         
     }
-
     func loadingApiSpaceRocket(){
 
         let urlString =  "https://api.spacexdata.com/v4/rockets"
         guard let url = URL(string: urlString) else {return}
 
-          URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [self] (data, response, error) in
             
             guard let data = data else {return}
             
             do {
                 let decodeArray = try JSONDecoder().decode([rocketArray].self, from: data)
                 
-                let rocket = decodeArray[2]
+                let rocket = decodeArray[index]
 
                 DispatchQueue.global().async {
                     guard let imageUrl = URL(string: (rocket.flickr_images.randomElement())!) else {return}
@@ -108,16 +114,26 @@ class ViewController: UIViewController {
                     //FirstStage
                     self.firstAmountEngine.text = String(describing: rocket.first_stage.engines!)
                     self.firstAmountFuel.text = String(describing: rocket.first_stage.fuel_amount_tons!)
-                    //Необходимо убрать опционал
-                    self.firstCombustionTime.text = String(describing: rocket.first_stage.burn_time_sec!)
+                   
+                    if rocket.first_stage.burn_time_sec == nil{
+                        self.firstCombustionTime.text = String(describing: rocket.first_stage.burn_time_sec)
+                    } else {
+                        self.firstCombustionTime.text = String(describing: rocket.first_stage.burn_time_sec!)
+                    }
+                    
                     
                     //SecondStage
                     self.secondAmountEngine.text = String(describing: rocket.second_stage.engines!)
                     self.secondAmountFuel.text = String(describing: rocket.second_stage.fuel_amount_tons!)
-                    //Необходимо убрать опционал
-                    self.secondCombustionTime.text = String(describing: rocket.second_stage.burn_time_sec!)
+                    
+                    if rocket.second_stage.burn_time_sec == nil {
+                        self.secondCombustionTime.text = String(describing: rocket.second_stage.burn_time_sec)
+                    } else {
+                        self.secondCombustionTime.text = String(describing: rocket.second_stage.burn_time_sec!)
+                    }
+                  
                 
-                
+
                 }
                 }
 
@@ -130,8 +146,43 @@ class ViewController: UIViewController {
 
         .resume()
         }
+    func designRocket(){
+        if index == 0 {
+            leftButton.isHidden = true
+        }
+        else {
+            leftButton.isHidden = false
+        }
+        if index == (pageControl.numberOfPages - 1){
+            rightButton.isHidden = true
+        }
+        else {
+            rightButton.isHidden = false
         
+        }
         
+    }
+    func showNewRocket(){
+        pageControl.currentPage = index
+        loadingApiSpaceRocket()
+        designRocket()
+        
+    }
+        
+    
+    @IBAction func pressedLeftButton(_ sender: UIButton) {
+        guard index > 0 else {return}
+        index -= 1
+        showNewRocket()
+    }
+    
+    @IBAction func pressedRightButton(_ sender: UIButton) {
+        guard index < (pageControl.numberOfPages - 1) else {return}
+        index += 1
+        showNewRocket()
+    }
+    
+    
     }
 
 

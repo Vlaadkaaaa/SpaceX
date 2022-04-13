@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -499,6 +500,9 @@
                                                         <state key="normal" title="Посмотреть запуски">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="obi-cO-19j" kind="show" id="dJN-7p-bfF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -532,7 +536,7 @@
                                     <constraint firstAttribute="trailing" secondItem="f1v-96-yLO" secondAttribute="trailing" id="zaj-AT-RAv"/>
                                 </constraints>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-An-RUW">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="6Na-An-RUW">
                                 <rect key="frame" x="0.0" y="824" width="414" height="72"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -540,18 +544,54 @@
                                 </constraints>
                                 <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-VU-57k">
+                                <rect key="frame" x="317" y="843" width="77" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8xF-b5-5Fv"/>
+                                    <constraint firstAttribute="width" constant="77" id="b7u-kE-37e"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next Rocket">
+                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedRightButton:" destination="YJC-fz-HQz" eventType="touchUpInside" id="1Ar-Aq-zNS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awp-ii-0l0">
+                                <rect key="frame" x="20" y="843" width="91" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="BpS-rx-LRz"/>
+                                    <constraint firstAttribute="height" constant="34" id="lmW-PC-5aP"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous Rocket">
+                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressedLeftButton:" destination="YJC-fz-HQz" eventType="touchUpInside" id="ULB-MD-wOu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S5H-ez-amH"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Na-An-RUW" firstAttribute="trailing" secondItem="S5H-ez-amH" secondAttribute="trailing" id="5mI-Zh-nZ2"/>
+                            <constraint firstItem="YhT-VU-57k" firstAttribute="top" secondItem="IEe-bx-NYG" secondAttribute="bottom" constant="19" id="FRN-4j-foZ"/>
                             <constraint firstItem="IEe-bx-NYG" firstAttribute="trailing" secondItem="S5H-ez-amH" secondAttribute="trailing" id="Hpm-uc-pAv"/>
                             <constraint firstItem="IEe-bx-NYG" firstAttribute="leading" secondItem="S5H-ez-amH" secondAttribute="leading" id="Of4-U2-RL6"/>
                             <constraint firstItem="6Na-An-RUW" firstAttribute="leading" secondItem="S5H-ez-amH" secondAttribute="leading" id="RDo-cl-CBY"/>
                             <constraint firstAttribute="bottom" secondItem="6Na-An-RUW" secondAttribute="bottom" id="V8o-UJ-Sbc"/>
+                            <constraint firstAttribute="bottom" secondItem="YhT-VU-57k" secondAttribute="bottom" constant="19" id="YP4-me-DcQ"/>
                             <constraint firstItem="6Na-An-RUW" firstAttribute="top" secondItem="IEe-bx-NYG" secondAttribute="bottom" id="Ygw-7w-Ya6"/>
+                            <constraint firstItem="Awp-ii-0l0" firstAttribute="top" secondItem="IEe-bx-NYG" secondAttribute="bottom" constant="19" id="aGc-cQ-EVH"/>
+                            <constraint firstItem="Awp-ii-0l0" firstAttribute="leading" secondItem="S5H-ez-amH" secondAttribute="leading" constant="20" id="ao7-Yv-DN3"/>
+                            <constraint firstAttribute="bottom" secondItem="Awp-ii-0l0" secondAttribute="bottom" constant="19" id="dhz-fX-jxN"/>
                             <constraint firstItem="IEe-bx-NYG" firstAttribute="top" secondItem="s2I-xe-Q0e" secondAttribute="top" id="gFF-5X-WeP"/>
                             <constraint firstItem="6Na-An-RUW" firstAttribute="top" secondItem="IEe-bx-NYG" secondAttribute="bottom" id="jpy-k8-7jT"/>
+                            <constraint firstItem="S5H-ez-amH" firstAttribute="trailing" secondItem="YhT-VU-57k" secondAttribute="trailing" constant="20" id="wMP-uV-3kb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -563,9 +603,12 @@
                         <outlet property="firstStartLabel" destination="i0d-ZV-Wel" id="ebf-Fv-1fn"/>
                         <outlet property="heightValueLabel" destination="4l2-Uy-CW1" id="StW-a4-AP1"/>
                         <outlet property="imageView" destination="9XN-8o-M6P" id="MEn-ds-RQf"/>
+                        <outlet property="leftButton" destination="Awp-ii-0l0" id="MbK-Lg-ifY"/>
                         <outlet property="loadValueLabel" destination="7fp-Zx-w4R" id="e8A-OR-QX3"/>
                         <outlet property="massValueLabel" destination="v39-4A-hwR" id="RXA-Hp-i2k"/>
+                        <outlet property="pageControl" destination="6Na-An-RUW" id="f16-TH-rbw"/>
                         <outlet property="priceStartLabel" destination="3Bm-EY-7Zy" id="30U-uq-MKk"/>
+                        <outlet property="rightButton" destination="YhT-VU-57k" id="ezd-Bm-YwN"/>
                         <outlet property="rocketNameLabel" destination="koh-lC-030" id="HEc-ze-iKw"/>
                         <outlet property="secondAmountEngine" destination="Qvo-7T-4Te" id="4yp-fK-9wR"/>
                         <outlet property="secondAmountFuel" destination="UJT-UV-4VH" id="elG-Ol-kiO"/>
@@ -594,10 +637,29 @@
                     </constraints>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="862" y="154"/>
+            <point key="canvasLocation" x="860.86956521739137" y="153.34821428571428"/>
+        </scene>
+        <!--Page Two View Controller-->
+        <scene sceneID="X4t-Ny-TWb">
+            <objects>
+                <viewController id="obi-cO-19j" customClass="PageTwoViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XQE-aQ-oJF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A7y-sp-8yv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cS3-fk-i8N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLn-59-khV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="158"/>
         </scene>
     </scenes>
     <resources>
         <image name="setting" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
