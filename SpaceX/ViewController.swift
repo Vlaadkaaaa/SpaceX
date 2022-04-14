@@ -182,7 +182,10 @@ class ViewController: UIViewController {
         showNewRocket()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationIndex: PageTwoViewController = segue.destination as! PageTwoViewController
+        destinationIndex.indexFromPageOne = index
+    }
     }
 
 
