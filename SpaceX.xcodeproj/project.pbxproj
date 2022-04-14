@@ -10,6 +10,8 @@
 		555E93E82804269800D9DF64 /* RocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E93E72804269800D9DF64 /* RocketApi.swift */; };
 		555E945C2806C0B200D9DF64 /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E945B2806C0B200D9DF64 /* PageTwoViewController.swift */; };
 		555E948828082C6300D9DF64 /* StartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555E948728082C6200D9DF64 /* StartApi.swift */; };
+		555E94992808796400D9DF64 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555E94972808796400D9DF64 /* LabGrotesque-Bold.ttf */; };
+		555E949A2808796400D9DF64 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 555E94982808796400D9DF64 /* LabGrotesque-Regular.ttf */; };
 		5588796327FC0EA40044DE1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796227FC0EA40044DE1B /* AppDelegate.swift */; };
 		5588796527FC0EA40044DE1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796427FC0EA40044DE1B /* SceneDelegate.swift */; };
 		5588796727FC0EA40044DE1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5588796627FC0EA40044DE1B /* ViewController.swift */; };
@@ -18,14 +20,14 @@
 		5588796F27FC0EA60044DE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5588796E27FC0EA60044DE1B /* Assets.xcassets */; };
 		5588797227FC0EA60044DE1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5588797027FC0EA60044DE1B /* LaunchScreen.storyboard */; };
 		5588797A27FC0ED30044DE1B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5588797927FC0ED30044DE1B /* .gitignore */; };
-		55CD7DDD27FC11EE005C0578 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */; };
-		55CD7DDE27FC11EE005C0578 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		555E93E72804269800D9DF64 /* RocketApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketApi.swift; sourceTree = "<group>"; };
 		555E945B2806C0B200D9DF64 /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
 		555E948728082C6200D9DF64 /* StartApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartApi.swift; sourceTree = "<group>"; };
+		555E94972808796400D9DF64 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Bold.ttf"; path = "../../../../Downloads/font/LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
+		555E94982808796400D9DF64 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Regular.ttf"; path = "../../../../Downloads/font/LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 		5588795F27FC0EA40044DE1B /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5588796227FC0EA40044DE1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5588796427FC0EA40044DE1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		5588797127FC0EA60044DE1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5588797327FC0EA60044DE1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5588797927FC0ED30044DE1B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Bold.ttf"; path = "../../../../Downloads/LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
-		55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Regular.ttf"; path = "../../../../Downloads/LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		5588797B27FC10810044DE1B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				55CD7DDB27FC11EE005C0578 /* LabGrotesque-Bold.ttf */,
-				55CD7DDC27FC11EE005C0578 /* LabGrotesque-Regular.ttf */,
+				555E94972808796400D9DF64 /* LabGrotesque-Bold.ttf */,
+				555E94982808796400D9DF64 /* LabGrotesque-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -157,9 +157,9 @@
 				5588797A27FC0ED30044DE1B /* .gitignore in Resources */,
 				5588797227FC0EA60044DE1B /* LaunchScreen.storyboard in Resources */,
 				5588796F27FC0EA60044DE1B /* Assets.xcassets in Resources */,
-				55CD7DDD27FC11EE005C0578 /* LabGrotesque-Bold.ttf in Resources */,
+				555E94992808796400D9DF64 /* LabGrotesque-Bold.ttf in Resources */,
 				5588796A27FC0EA40044DE1B /* Main.storyboard in Resources */,
-				55CD7DDE27FC11EE005C0578 /* LabGrotesque-Regular.ttf in Resources */,
+				555E949A2808796400D9DF64 /* LabGrotesque-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
