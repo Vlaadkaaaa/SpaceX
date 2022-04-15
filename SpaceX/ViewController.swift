@@ -78,11 +78,19 @@ class ViewController: UIViewController {
             
         
     }
+    func dateFormatting(valueString: String, oldFormat: String = "yyyy/MM/dd", newFormat: String = "dd MMMM yyyy") -> String?{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = oldFormat
+        guard let date = dateFormatter.date(from: valueString) else {return nil}
+        dateFormatter.dateFormat = newFormat
+        
+        return dateFormatter.string(from: date)
+    }
+    
     func loadingApiSpaceRocket(){
 
         let urlString =  "https://api.spacexdata.com/v4/rockets"
         guard let url = URL(string: urlString) else {return}
-
         URLSession.shared.dataTask(with: url) { [self] (data, response, error) in
             
             guard let data = data else {return}
@@ -107,7 +115,9 @@ class ViewController: UIViewController {
                     self.loadValueLabel.text = String(describing: rocket.payload_weights.first!.kg!)
 
                     //Start
-                    self.firstStartLabel.text = rocket.first_flight
+                    let valueStartDate = dateFormatting(valueString: rocket.first_flight)!
+                    self.firstStartLabel.text = String(describing: valueStartDate)
+                    
                     self.countryStartLabel.text = rocket.country
                     self.priceStartLabel.text = "\(rocket.cost_per_launch)"
                     
@@ -169,7 +179,6 @@ class ViewController: UIViewController {
         
     }
         
-    
     @IBAction func pressedLeftButton(_ sender: UIButton) {
         guard index > 0 else {return}
         index -= 1

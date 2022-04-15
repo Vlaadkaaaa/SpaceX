@@ -40,6 +40,15 @@ class PageTwoViewController: UIViewController {
         viewTwo.layer.cornerRadius = 24
         viewThree.layer.cornerRadius = 24
     }
+    func dateFormattingPageTwo(valueString: String, oldFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", newFormat: String = "dd MMMM yyyy") -> String?{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = oldFormat
+        guard let date = dateFormatter.date(from: valueString) else {return nil}
+        dateFormatter.dateFormat = newFormat
+        
+        return dateFormatter.string(from: date)
+    }
+
 
     func loadingApiStartRocket(){
         let urlStringStart = "https://api.spacexdata.com/v4/launches"
@@ -60,7 +69,10 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69955f709d1eb" {
                                 DispatchQueue.main.async {
                                     self.labelNameOne.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateOne.text = decodeStartRocketArray[newIndex].date_utc
+                                    
+                                    let date0 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateOne.text = date0
+                                    
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageOne.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -75,7 +87,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69955f709d1eb" {
                                 DispatchQueue.main.async {
                                     self.labelNameTwo.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateTwo.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date1 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateTwo.text = date1
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageTwo.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -90,7 +103,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69955f709d1eb" {
                                 DispatchQueue.main.async {
                                     self.labelNameThree.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateThree.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date3 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateThree.text = date3
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageThree.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -110,7 +124,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69973a809d1ec" {
                                 DispatchQueue.main.async {
                                     self.labelNameOne.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateOne.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date5 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateOne.text = date5
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageOne.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -125,7 +140,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69973a809d1ec" {
                                 DispatchQueue.main.async {
                                     self.labelNameTwo.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateTwo.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date33 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateTwo.text = date33
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageTwo.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -140,7 +156,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69973a809d1ec" {
                                 DispatchQueue.main.async {
                                     self.labelNameThree.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateThree.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date90 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateThree.text = date90
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageThree.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -160,7 +177,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69974db09d1ed" {
                                 DispatchQueue.main.async {
                                     self.labelNameOne.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateOne.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date54 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateOne.text = date54
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageOne.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -175,7 +193,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69974db09d1ed" {
                                 DispatchQueue.main.async {
                                     self.labelNameTwo.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateTwo.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date76 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateTwo.text = date76
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageTwo.image = UIImage(named: "SuccessTrue")
                                     } else{
@@ -190,7 +209,8 @@ class PageTwoViewController: UIViewController {
                             if decodeStartRocketArray[newIndex].rocket == "5e9d0d95eda69974db09d1ed" {
                                 DispatchQueue.main.async {
                                     self.labelNameThree.text = decodeStartRocketArray[newIndex].name
-                                    self.labelDateThree.text = decodeStartRocketArray[newIndex].date_utc
+                                    let date80 = dateFormattingPageTwo(valueString: decodeStartRocketArray[newIndex].date_utc!)
+                                    self.labelDateThree.text = date80
                                     if decodeStartRocketArray[newIndex].success == true{
                                         self.imageThree.image = UIImage(named: "SuccessTrue")
                                     } else{
